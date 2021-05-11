@@ -64,8 +64,8 @@ Raspbery Pi4にXENが来てから数か月経過しているが、2021年４月�
     # rpm -ivh /var/cache/zypp/packages/repo-source/src/xen-4.14.1_16-1.1.src.rpm
     # cd /usr/src/packages/SPECS/
     # cp ~/rpi4-xen-on-suse/xen-dt-generation-failed.patch SOURCES/
-    # cp ~/rpi4-xen-on-suse/xen-yinose.spec SPEC/xen.spec
-    # rpmbuild -ba SPEC/xen.spec
+    # cp ~/rpi4-xen-on-suse/xen-yinose.spec SPECS/xen.spec
+    # rpmbuild -ba SPECS/xen.spec
 
 ## カーネルのビルド
 ソースを持ってきて、patch を入れてビルド。
@@ -81,7 +81,7 @@ Raspbery Pi4にXENが来てから数か月経過しているが、2021年４月�
     # cp rpi4-xen-on-suse/config/arm64/default config/arm64/
     # tar jcvf config.tar.bz2 config
     # mv config.tar.bz2 /usr/src/packages/SPECS/SOURCES/
-    # cd /usr/src/packages/SPEC
+    # cd /usr/src/packages/SPECS
     # cp ~/rpi4-xen-on-suse/kernel-yinose.spec kernel-default.spec
     # rpmbuild -ba kernel-default.spec
     
