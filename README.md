@@ -79,7 +79,7 @@ Raspbery Pi4にXENが来てから数か月経過しているが、2021年４月�
     # tar jxvf config.tar.bz2
     # cp rpi4-xen-on-suse/config/arm64/default config/arm64/
     # tar jcvf config.tar.bz2 config
-    # mv config.tar.bz2 /usr/src/packages/SPECS/SOURCES/
+    # mv config.tar.bz2 /usr/src/packages/SOURCES/
     # cd /usr/src/packages/SPECS
     # cp ~/rpi4-xen-on-suse/kernel-yinose.spec kernel-default.spec
     # rpmbuild -ba kernel-default.spec
