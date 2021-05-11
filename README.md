@@ -38,7 +38,7 @@ Raspbery Pi4にXENが来てから数か月経過しているが、2021年４月�
     PRETTY_NAME="openSUSE Tumbleweed"
     
 ## 元にしたイメージ
-[ここ](https://en.opensuse.org/HCL:Raspberry_Pi4)から持ってきたこれ↓を USB-SSD に dd しました。
+[HCL:Raspberry Pi4](https://en.opensuse.org/HCL:Raspberry_Pi4)から持ってきたイメージを USB-SSD に dd しました。
 
     # xzcat openSUSE-Tumbleweed-ARM-KDE-raspberrypi.aarch64.raw.xz | dd bs=4M of=/dev/sde iflag=fullblock oflag=direct status=progress; sync
 
