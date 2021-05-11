@@ -135,7 +135,7 @@ grub2-mkconfig の実行
 
 
 ## XENの設定
-[XEN ON RASPBERRY PI 4 ADVENTURES](https://xenproject.org/2020/09/29/xen-on-raspberry-pi-4-adventures/)に書いてあるが、コンソールの設定をしておく。
+[XEN ON RASPBERRY PI 4 ADVENTURES](https://xenproject.org/2020/09/29/xen-on-raspberry-pi-4-adventures/)を参考にコンソールの設定をしておく。
 
     # cat /boot/efi/EFI/opensuse/xen-4.14.1_16_rpi4-0.cfg
     # disclaimer
