@@ -101,7 +101,7 @@ Raspbery Pi4にXENが来てから数か月経過しているが、2021年４月�
     -GRUB_CMDLINE_XEN=""
     +GRUB_CMDLINE_XEN="console=dtuart sync_console dom0_mem=2048M,max:2048M dom0_max_vcpus=2 loglvl=all"
     
-ダミーファイルを /boot 配下に置いておく（XENのエントリ作成用のダミー。grub2-mkconfig の実行時に /etc/grub.d/20_linux_xen でファイルの有無を判断しているため。grub2-mkconfig 実行時には /usr/share/efi/aarch64/ に置いてあるイメージが /usr/share/efi/aarch64/配下にコピーされるので、/boot配下の xen.gz はダミーで問題ないっぽい）
+ダミーファイルを /boot 配下に置いておく（XENのエントリ作成用のダミー。grub2-mkconfig の実行時に /etc/grub.d/20_linux_xen でファイルの有無を判断しているため。grub2-mkconfig 実行時には /usr/share/efi/aarch64/ に置いてあるイメージが /boot/efi/EFI/opensuse/配下にコピーされるので、/boot配下の xen.gz はダミーで問題ないっぽい）
 
     # cd /boot
     # touch xen-4.14.1_16_rpi4-0.gz
