@@ -1,0 +1,22 @@
+References: xen-devel@lists.xenproject.org/msg91554.html
+
+Elliott Mitchell Sun, 31 Jan 2021 15:33:23 -0800
+If you go to line 1412 of the file xen/arch/arm/domain_build.c and
+replace the "return res;" with "continue;" that will bypass the issue.
+The 3 people I'm copying on this message though may wish to ask questions
+about the state of your build tree.
+
+Index: xen/arch/arm64/domain_build.c
+===================================================================
+--- a/xen/arch/arm/domain_build.c	2021-05-11 06:55:44.691234650 +0000
++++ b/xen/arch/arm/domain_build.c	2021-05-11 04:41:05.399951713 +0000
+@@ -1409,7 +1409,8 @@
+         {
+             printk(XENLOG_ERR "Unable to retrieve address %u for %s\n",
+                    i, dt_node_full_name(dev));
+-            return res;
++            continue;
++            //return res;
+         }
+ 
+         res = map_range_to_domain(dev, addr, size, &mr_data);

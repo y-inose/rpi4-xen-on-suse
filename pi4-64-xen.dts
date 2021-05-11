@@ -1,0 +1,15 @@
+/dts-v1/;
+
+/ {
+        compatible = "brcm,bcm2711";
+
+        fragment@0 {
+                target-path = "/chosen";
+
+                __overlay__ {
+                        #address-cells = <0x01>;
+                        #size-cells = <0x01>;
+                        stdout-path = "/soc/serial@7e215040";
+                };
+        };
+};
