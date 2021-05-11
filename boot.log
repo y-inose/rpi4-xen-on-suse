@@ -1,0 +1,383 @@
+Xen 4.14.1_16_rpi4-1 (c/s ) EFI loader
+Using configuration file 'xen-4.14.1_16-1.cfg'
+vmlinux-5.12.0-xen-default: 0x000000002b4b1000-0x000000002d2e5a00
+initrd-5.12.0-xen-default: 0x000000002aa2f000-0x000000002b4b055c
+ __  __            _  _    _ _  _    _     _  __                 _ _  _      _
+ \ \/ /___ _ __   | || |  / | || |  / |   / |/ /_     _ __ _ __ (_) || |    / |
+  \  // _ \ '_ \  | || |_ | | || |_ | |   | | '_ \   | '__| '_ \| | || |_ __| |
+  /  \  __/ | | | |__   _|| |__   _|| |   | | (_) |  | |  | |_) | |__   _|__| |
+ /_/\_\___|_| |_|    |_|(_)_|  |_|(_)_|___|_|\___/___|_|  | .__/|_|  |_|    |_|
+                                     |_____|    |_____|   |_|
+(XEN) Xen version 4.14.1_16_rpi4-1 (root@suse.de) (gcc (SUSE Linux) 10.3.0) deb1
+(XEN) Latest ChangeSet:
+(XEN) build-id: 4d34e23d594408b47e11229b7f5ccc1e869534c7
+(XEN) Console output is synchronous.
+(XEN) Processor: 410fd083: "ARM Limited", variant: 0x0, part 0xd08, rev 0x3
+(XEN) 64-bit Execution:
+(XEN)   Processor Features: 0000000000002222 0000000000000000
+(XEN)     Exception Levels: EL3:64+32 EL2:64+32 EL1:64+32 EL0:64+32
+(XEN)     Extensions: FloatingPoint AdvancedSIMD
+(XEN)   Debug Features: 0000000010305106 0000000000000000
+(XEN)   Auxiliary Features: 0000000000000000 0000000000000000
+(XEN)   Memory Model Features: 0000000000001124 0000000000000000
+(XEN)   ISA Features:  0000000000010000 0000000000000000
+(XEN) 32-bit Execution:
+(XEN)   Processor Features: 00000131:00011011
+(XEN)     Instruction Sets: AArch32 A32 Thumb Thumb-2 Jazelle
+(XEN)     Extensions: GenericTimer Security
+(XEN)   Debug Features: 03010066
+(XEN)   Auxiliary Features: 00000000
+(XEN)   Memory Model Features: 10201105 40000000 01260000 02102211
+(XEN)  ISA Features: 02101110 13112111 21232042 01112131 00011142 00010001
+(XEN) SMP: Allowing 4 CPUs
+(XEN) enabled workaround for: ARM erratum 1319537
+(XEN) Generic Timer IRQ: phys=30 hyp=26 virt=27 Freq: 54000 KHz
+(XEN) GICv2 initialization:
+(XEN)         gic_dist_addr=00000000ff841000
+(XEN)         gic_cpu_addr=00000000ff842000
+(XEN)         gic_hyp_addr=00000000ff844000
+(XEN)         gic_vcpu_addr=00000000ff846000
+(XEN)         gic_maintenance_irq=25
+(XEN) GICv2: 256 lines, 4 cpus, secure (IID 0200143b).
+(XEN) XSM Framework v1.0.0 initialized
+(XEN) Initialising XSM SILO mode
+(XEN) Using scheduler: SMP Credit Scheduler rev2 (credit2)
+(XEN) Initializing Credit2 scheduler
+(XEN)  load_precision_shift: 18
+(XEN)  load_window_shift: 30
+(XEN)  underload_balance_tolerance: 0
+(XEN)  overload_balance_tolerance: -3
+(XEN)  runqueues arrangement: socket
+(XEN)  cap enforcement granularity: 10ms
+(XEN) load tracking window length 1073741824 ns
+(XEN) Allocated console ring of 32 KiB.
+(XEN) CPU0: Guest atomics will try 15 times before pausing the domain
+(XEN) Bringing up CPU1
+(XEN) CPU1: Guest atomics will try 14 times before pausing the domain
+(XEN) CPU 1 booted.
+(XEN) Bringing up CPU2
+(XEN) CPU2: Guest atomics will try 14 times before pausing the domain
+(XEN) CPU 2 booted.
+(XEN) Bringing up CPU3
+(XEN) CPU3: Guest atomics will try 14 times before pausing the domain
+(XEN) CPU 3 booted.
+(XEN) Brought up 4 CPUs
+(XEN) I/O virtualisation disabled
+(XEN) P2M: 44-bit IPA with 44-bit PA and 8-bit VMID
+(XEN) P2M: 4 levels with order-0 root, VTCR 0x80043594
+(XEN) Scheduling granularity: cpu, 1 CPU per sched-resource
+(XEN) Adding cpu 0 to runqueue 0
+(XEN)  First cpu on runqueue, activating
+(XEN) Adding cpu 1 to runqueue 0
+(XEN) Adding cpu 2 to runqueue 0
+(XEN) Adding cpu 3 to runqueue 0
+(XEN) alternatives: Patching with alt table 00000000002bc0d0 -> 00000000002bc820
+(XEN) *** LOADING DOMAIN 0 ***
+(XEN) Loading d0 kernel from boot module @ 000000002b4b1000
+(XEN) Loading ramdisk from boot module @ 000000002aa2f000
+(XEN) Allocating 1:1 mappings totalling 2048MB for dom0:
+(XEN) BANK[0] 0x00000008000000-0x00000028000000 (512MB)
+(XEN) BANK[1] 0x00000030000000-0x00000038000000 (128MB)
+(XEN) BANK[2] 0x000000a8000000-0x000000c0000000 (384MB)
+(XEN) BANK[3] 0x00000140000000-0x00000180000000 (1024MB)
+(XEN) Grant table range: 0x0000002d2f7000-0x0000002d337000
+(XEN) Unable to retrieve address 0 for /scb/pcie@7d500000/pci@1,0/usb@1,0
+(XEN) Allocating PPI 16 for event channel interrupt
+(XEN) Loading zImage from 000000002b4b1000 to 0000000008000000-0000000009e34a00
+(XEN) Loading d0 initrd from 000000002aa2f000 to 0x0000000010200000-0x000000001c
+(XEN) Loading d0 DTB to 0x0000000010000000-0x000000001000c035
+(XEN) Initial low memory virq threshold set at 0x4000 pages.
+(XEN) Scrubbing Free RAM in background
+(XEN) Std. Loglevel: All
+(XEN) Guest Loglevel: Nothing (Rate-limited: Errors and warnings)
+(XEN) ***************************************************
+(XEN) WARNING: CONSOLE OUTPUT IS SYNCHRONOUS
+(XEN) This option is intended to aid debugging of Xen by ensuring
+(XEN) that all output is synchronously delivered on the serial line.
+(XEN) However it can introduce SIGNIFICANT latencies and affect
+(XEN) timekeeping. It is NOT recommended for production use!
+(XEN) ***************************************************
+(XEN) No support for ARM_SMCCC_ARCH_WORKAROUND_1.
+(XEN) Please update your firmware.
+(XEN) ***************************************************
+(XEN) No support for ARM_SMCCC_ARCH_WORKAROUND_1.
+(XEN) Please update your firmware.
+(XEN) ***************************************************
+(XEN) No support for ARM_SMCCC_ARCH_WORKAROUND_1.
+(XEN) Please update your firmware.
+(XEN) ***************************************************
+(XEN) 3... 2... 1...
+(XEN) *** Serial input to DOM0 (type 'CTRL-a' three times to switch input)
+(XEN) Freed 344kB init memory.
+(XEN) d0v0: vGICD: unhandled word write 0x000000ffffffff to ICACTIVER4
+(XEN) d0v0: vGICD: unhandled word write 0x000000ffffffff to ICACTIVER8
+(XEN) d0v0: vGICD: unhandled word write 0x000000ffffffff to ICACTIVER12
+(XEN) d0v0: vGICD: unhandled word write 0x000000ffffffff to ICACTIVER16
+(XEN) d0v0: vGICD: unhandled word write 0x000000ffffffff to ICACTIVER20
+(XEN) d0v0: vGICD: unhandled word write 0x000000ffffffff to ICACTIVER24
+(XEN) d0v0: vGICD: unhandled word write 0x000000ffffffff to ICACTIVER28
+(XEN) d0v0: vGICD: unhandled word write 0x000000ffffffff to ICACTIVER0
+(XEN) d0v1: vGICD: unhandled word write 0x000000ffffffff to ICACTIVER0
+
+Welcome to openSUSE Tumbleweed dracut-053+suse.93.g039ac07d-1.1 (Initramfs)!
+
+[  OK  ] Started Dispatch Password .|ts to Console Directory Watch.
+[  OK  ] Reached target Local File Systems.
+[  OK  ] Reached target Paths.
+[  OK  ] Reached target Slices.
+[  OK  ] Reached target Swap.
+[  OK  ] Reached target Timers.
+[  OK  ] Listening on Journal Socket (/dev/log).
+[  OK  ] Listening on Journal Socket.
+[  OK  ] Listening on udev Control Socket.
+[  OK  ] Listening on udev Kernel Socket.
+[  OK  ] Reached target Sockets.
+         Starting Create list of st.|odes for the current kernel...
+         Starting Journal Service...
+         Starting Load Kernel Modules...
+         Starting Setup Virtual Console...
+[  OK  ] Finished Create list of st.| nodes for the current kernel.
+         Starting Create Static Device Nodes in /dev...
+[FAILED] Failed to start Setup Virtual Console.
+See 'systemctl status systemd-vconsole-setup.service' for details.
+[DEPEND] Dependency failed for drac.|additional cmdline parameters.
+[  OK  ] Started Journal Service.
+[  OK  ] Finished Load Kernel Modules.
+[  OK  ] Finished Create Static Device Nodes in /dev.
+         Starting dracut cmdline hook...
+         Starting Apply Kernel Variables...
+         Starting Create Volatile Files and Directories...
+[  OK  ] Finished Apply Kernel Variables.
+[  OK  ] Finished Create Volatile Files and Directories.
+[  OK  ] Finished dracut cmdline hook.
+         Starting dracut pre-udev hook...
+[  OK  ] Finished dracut pre-udev hook.
+         Starting Rule-based Manage.|for Device Events and Files...
+[  OK  ] Started Rule-based Manager for Device Events and Files.
+         Starting Coldplug All udev Devices...
+[  OK  ] Finished Coldplug All udev Devices.
+[  OK  ] Reached target System Initialization.
+[  OK  ] Reached target Basic System.
+         Starting dracut initqueue hook...
+[  OK  ] Found device SSD-PUTA ROOT.
+[  OK  ] Found device SSD-PUTA EFI.
+[  OK  ] Reached target Initrd Root Device.
+[  OK  ] Finished dracut initqueue hook.
+[  OK  ] Reached target Remote File Systems (Pre).
+[  OK  ] Reached target Remote File Systems.
+         Starting File System Check.|92f9-4020-91fd-f7bfabbbc2b5...
+[  OK  ] Finished File System Check.|c-92f9-4020-91fd-f7bfabbbc2b5.
+         Mounting /sysroot...
+[  OK  ] Mounted /sysroot.
+[  OK  ] Reached target Initrd Root File System.
+         Starting Reload Configuration from the Real Root...
+[  OK  ] Finished Reload Configuration from the Real Root.
+[  OK  ] Reached target Initrd File Systems.
+[  OK  ] Reached target Initrd Default Target.
+         Starting Cleaning Up and Shutting Down Daemons...
+[  OK  ] Stopped target Initrd Default Target.
+[  OK  ] Stopped target Basic System.
+[  OK  ] Stopped target Initrd Root Device.
+[  OK  ] Stopped target Paths.
+[  OK  ] Stopped Dispatch Password .|ts to Console Directory Watch.
+[  OK  ] Stopped target Remote File Systems.
+[  OK  ] Stopped target Remote File Systems (Pre).
+[  OK  ] Stopped target Slices.
+[  OK  ] Stopped target Sockets.
+[  OK  ] Stopped target System Initialization.
+[  OK  ] Stopped target Swap.
+[  OK  ] Stopped target Timers.
+[  OK  ] Stopped dracut initqueue hook.
+[  OK  ] Stopped Apply Kernel Variables.
+[  OK  ] Stopped Load Kernel Modules.
+[  OK  ] Stopped Create Volatile Files and Directories.
+[  OK  ] Stopped target Local File Systems.
+[  OK  ] Stopped Coldplug All udev Devices.
+         Stopping Rule-based Manage.|for Device Events and Files...
+[  OK  ] Finished Cleaning Up and Shutting Down Daemons.
+[  OK  ] Stopped Rule-based Manager for Device Events and Files.
+[  OK  ] Closed udev Control Socket.
+[  OK  ] Closed udev Kernel Socket.
+[  OK  ] Stopped dracut pre-udev hook.
+[  OK  ] Stopped dracut cmdline hook.
+         Starting Cleanup udev Database...
+[  OK  ] Stopped Create Static Device Nodes in /dev.
+[  OK  ] Stopped Create list of sta.| nodes for the current kernel.
+[  OK  ] Finished Cleanup udev Database.
+[  OK  ] Reached target Switch Root.
+         Starting Switch Root...
+
+Welcome to openSUSE Tumbleweed!
+
+[  OK  ] Stopped Switch Root.
+[  OK  ] Created slice system-getty.slice.
+[  OK  ] Created slice system-modprobe.slice.
+[  OK  ] Created slice system-serial\x2dgetty.slice.
+[  OK  ] Created slice User and Session Slice.
+[  OK  ] Started Dispatch Password .|ts to Console Directory Watch.
+[  OK  ] Set up automount Arbitrary.|s File System Automount Point.
+[  OK  ] Reached target Local Encrypted Volumes.
+[  OK  ] Stopped target Switch Root.
+[  OK  ] Stopped target Initrd File Systems.
+[  OK  ] Stopped target Initrd Root File System.
+[  OK  ] Reached target Remote File Systems.
+[  OK  ] Reached target Slices.
+[  OK  ] Reached target System Time Set.
+[  OK  ] Listening on Device-mapper event daemon FIFOs.
+[  OK  ] Listening on LVM2 poll daemon socket.
+[  OK  ] Listening on initctl Compatibility Named Pipe.
+[  OK  ] Listening on udev Control Socket.
+[  OK  ] Listening on udev Kernel Socket.
+         Activating swap /dev/disk/.|a5aa-47b4-be6d-cf63a4f09748...
+         Mounting Huge Pages File System...
+         Mounting POSIX Message Queue File System...
+         Mounting Mount /proc/xen files...
+         Mounting Kernel Debug File System...
+         Mounting Kernel Trace File System...
+         Starting Load AppArmor profiles...
+         Starting Create list of st.|odes for the current kernel...
+         Starting Monitoring of LVM.|meventd or progress polling...
+         Starting Load Kernel Module configfs...
+         Starting Load Kernel Module drm...
+         Starting Load Kernel Module fuse...
+[  OK  ] Stopped Journal Service.
+         Starting Journal Service...
+         Starting Load Kernel Modules...
+         Starting Remount Root and Kernel File Systems...
+         Starting Coldplug All udev Devices...
+[  OK  ] Activated swap /dev/disk/b.|e-a5aa-47b4-be6d-cf63a4f09748.
+[  OK  ] Mounted Huge Pages File System.
+[  OK  ] Mounted POSIX Message Queue File System.
+[  OK  ] Mounted Mount /proc/xen files.
+[  OK  ] Mounted Kernel Debug File System.
+[  OK  ] Mounted Kernel Trace File System.
+[  OK  ] Started Journal Service.
+[  OK  ] Finished Load AppArmor profiles.
+[  OK  ] Finished Create list of st.| nodes for the current kernel.
+[  OK  ] Finished Monitoring of LVM.| dmeventd or progress polling.
+[  OK  ] Finished Load Kernel Module configfs.
+[  OK  ] Finished Load Kernel Module drm.
+[  OK  ] Finished Load Kernel Module fuse.
+[  OK  ] Finished Load Kernel Modules.
+[  OK  ] Finished Remount Root and Kernel File Systems.
+[  OK  ] Reached target Swap.
+         Mounting FUSE Control File System...
+         Mounting Kernel Configuration File System...
+         Mounting Temporary Directory (/tmp)...
+         Starting Flush Journal to Persistent Storage...
+         Starting Load/Save Random Seed...
+         Starting Apply Kernel Variables...
+         Starting Create Static Device Nodes in /dev...
+[  OK  ] Mounted FUSE Control File System.
+[  OK  ] Mounted Kernel Configuration File System.
+[  OK  ] Mounted Temporary Directory (/tmp).
+[  OK  ] Finished Coldplug All udev Devices.
+[  OK  ] Finished Create Static Device Nodes in /dev.
+[  OK  ] Reached target Local File Systems (Pre).
+         Mounting /boot/efi...
+         Mounting mount xenstore file system...
+         Starting Rule-based Manage.|for Device Events and Files...
+[  OK  ] Finished Apply Kernel Variables.
+[  OK  ] Mounted mount xenstore file system.
+[  OK  ] Finished Flush Journal to Persistent Storage.
+[  OK  ] Mounted /boot/efi.
+[  OK  ] Reached target Local File Systems.
+         Starting Restore /run/initramfs on shutdown...
+         Starting Create Volatile Files and Directories...
+[  OK  ] Finished Restore /run/initramfs on shutdown.
+[  OK  ] Finished Create Volatile Files and Directories.
+         Starting Security Auditing Service...
+[  OK  ] Started Rule-based Manager for Device Events and Files.
+[  OK  ] Started Security Auditing Service.
+         Starting Update UTMP about System Boot/Shutdown...
+[  OK  ] Finished Update UTMP about System Boot/Shutdown.
+[  OK  ] Reached target System Initialization.
+[  OK  ] Started Watch for changes in CA certificates.
+[  OK  ] Started CUPS Scheduler.
+[  OK  ] Started Watch for changes in issue snippets.
+[  OK  ] Started Daily Cleanup of Temporary Directories.
+[  OK  ] Reached target Paths.
+[  OK  ] Listening on Avahi mDNS/DNS-SD Stack Activation Socket.
+[  OK  ] Listening on CUPS Scheduler.
+[  OK  ] Listening on D-Bus System Message Bus Socket.
+[  OK  ] Reached target Sockets.
+[  OK  ] Reached target Basic System.
+         Starting Avahi mDNS/DNS-SD Stack...
+[  OK  ] Started D-Bus System Message Bus.
+         Starting Network Manager...
+[  OK  ] Started irqbalance daemon.
+         Starting Generate issue file for login session...
+         Starting Apply settings from /etc/sysconfig/keyboard...
+         Starting Name Service Cache Daemon...
+         Starting Authorization Manager...
+         Starting Load dom0 backend drivers...
+         Starting Load Kernel Module configfs...
+[  OK  ] Finished Load Kernel Module configfs.
+[  OK  ] Started Name Service Cache Daemon.
+[  OK  ] Started Avahi mDNS/DNS-SD Stack.
+[  OK  ] Started Network Manager.
+[  OK  ] Finished Generate issue file for login session.
+[  OK  ] Reached target Network.
+[  OK  ] Reached target Host and Network Name Lookups.
+[  OK  ] Reached target User and Group Name Lookups.
+         Starting NTP client/server...
+         Starting OpenSSH Daemon...
+         Starting Hostname Service...
+         Starting User Login Management...
+         Starting Permit User Sessions...
+[  OK  ] Finished Permit User Sessions.
+[  OK  ] Started Authorization Manager.
+[  OK  ] Finished Load/Save Random Seed.
+[  OK  ] Finished Apply settings from /etc/sysconfig/keyboard.
+[  OK  ] Started NTP client/server.
+[  OK  ] Reached target System Time Synchronized.
+[  OK  ] Started Backup of RPM database.
+[  OK  ] Started Backup of /etc/sysconfig.
+[  OK  ] Started Check if mainboard battery is Ok.
+[  OK  ] Started Discard unused blocks once a week.
+[  OK  ] Started Daily rotation of log files.
+[  OK  ] Started Do daily mandb update.
+[  OK  ] Reached target Timers.
+[  OK  ] Listening on Load/Save RF .|itch Status /dev/rfkill Watch.
+         Starting Modem Manager...
+[  OK  ] Started Getty on tty1.
+         Starting Postfix Mail Transport Agent...
+[  OK  ] Started Serial Getty on hvc0.
+[  OK  ] Reached target Login Prompts.
+[  OK  ] Started User Login Management.
+[  OK  ] Started Hostname Service.
+         Starting Network Manager Script Dispatcher Service...
+         Starting X Display Manager...
+         Starting Load/Save RF Kill Switch Status...
+[  OK  ] Started OpenSSH Daemon.
+[  OK  ] Started Network Manager Script Dispatcher Service.
+[  OK  ] Started Load/Save RF Kill Switch Status.
+[  OK  ] Finished Load dom0 backend drivers.
+         Starting The Xen xenstore...
+[  OK  ] Started Modem Manager.
+         Starting Locale Service...
+[  OK  ] Started The Xen xenstore.
+         Starting xen-init-dom0, in.|s, JSON configuration stub)...
+         Starting Xenconsoled - han.|est consoles and hypervisor...
+[  OK  ] Started Xenconsoled - hand.|guest consoles and hypervisor.
+         Starting qemu for xen dom0 disk backend...
+[  OK  ] Finished xen-init-dom0, in.|des, JSON configuration stub).
+[  OK  ] Started qemu for xen dom0 disk backend.
+         Starting xencommons...
+[  OK  ] Finished xencommons.
+         Starting WPA Supplicant daemon...
+[  OK  ] Started WPA Supplicant daemon.
+[  OK  ] Reached target Network (Pre).
+[  OK  ] Started Locale Service.
+[  OK  ] Started X Display Manager.
+[  OK  ] Started Postfix Mail Transport Agent.
+[  OK  ] Started Command Scheduler.
+[  OK  ] Reached target Multi-User System.
+[  OK  ] Reached target Graphical Interface.
+         Starting Update UTMP about System Runlevel Changes...
+[  OK  ] Finished Update UTMP about System Runlevel Changes.
+
+Welcome to openSUSE Tumbleweed 20210504 - Kernel 5.12.0-xen-default (hvc0).
+
+eth0: 192.168.12.15 fe80::3eb:d4e8:780f:5acf
+wlan0:
