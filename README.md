@@ -63,8 +63,8 @@ Raspbery Pi4にXENが来てから数か月経過しているが、2021年４月�
     # zypper in -t srcpackage -d xen
     # rpm -ivh /var/cache/zypp/packages/repo-source/src/xen-4.14.1_16-1.1.src.rpm
     # cd /usr/src/packages/SPECS/
-    # cp ~/pi4-xen-suse/xen-dt-generation-failed.patch SOURCES/
-    # cp ~/pi4-xen-suse/xen-yinose.spec SPEC/xen.spec
+    # cp ~/rpi4-xen-on-suse/xen-dt-generation-failed.patch SOURCES/
+    # cp ~/rpi4-xen-on-suse/xen-yinose.spec SPEC/xen.spec
     # rpmbuild -ba SPEC/xen.spec
 
 ## カーネルのビルド
@@ -78,11 +78,11 @@ Raspbery Pi4にXENが来てから数か月経過しているが、2021年４月�
     # cp /usr/src/packages/SOURCES/config.tar.bz2 ~/
     # cd ~/
     # tar jxvf config.tar.bz2
-    # cp pi4-xen-suse/config/arm64/default config/arm64/
+    # cp rpi4-xen-on-suse/config/arm64/default config/arm64/
     # tar jcvf config.tar.bz2 config
     # mv config.tar.bz2 /usr/src/packages/SPECS/SOURCES/
     # cd /usr/src/packages/SPEC
-    # cp ~/pi4-xen-suse/kernel-yinose.spec kernel-default.spec
+    # cp ~/rpi4-xen-on-suse/kernel-yinose.spec kernel-default.spec
     # rpmbuild -ba kernel-default.spec
     
 ## インストール
@@ -123,7 +123,7 @@ grub2-mkconfig の実行
 
 ## dtbo の配置
 
-    # cd ~/pi4-xen-suse/
+    # cd ~/rpi4-xen-on-suse/
     # dtc -I dts -O dtb -o pi4-64-xen.dtbo pi4-64-xen.dts
     # cp pi4-64-xen.dtbo /boot/efi/overlays
     
