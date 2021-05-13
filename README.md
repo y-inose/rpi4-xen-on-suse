@@ -153,3 +153,11 @@ grub2-mkconfig の実行
 ![grub2-xen](https://user-images.githubusercontent.com/84007765/117802843-e875c880-b290-11eb-85f2-3e4e75b74232.PNG)
 
 ![xen-boot](https://user-images.githubusercontent.com/84007765/117803072-2d016400-b291-11eb-8cd4-0f1d8f85407d.PNG)
+
+## Guest
+
+zypper で入れた libvirt は Xen が有効になっていないので有効にしてビルドする必要がある（そのままだと virsh list で Dom0 すら表示されない）。
+
+ホビー用途なのでこれ以上のことはできなくても私は満足（そのうち公式パッケージが出てくるので）。
+
+![xl-list](https://user-images.githubusercontent.com/84007765/118092471-1da42700-b407-11eb-90f9-a2710a5f3d79.PNG)
